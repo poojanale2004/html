@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=[10,20,30,40,50];
+        function fun(a) {
+            return a>10;
+        }
+        let b=a.find(fun);
+        console.log(b);
+    </script>
+
+    <script>
+        let c=[78,50,63,88,44];
+        function myfun(c) {
+            return c>40;
+        }
+        let d=c.findIndex(myfun);
+        console.log(d);
+    </script>
+
+    <script>
+        let array=[78,96,85,63,42];
+        let array1=array.forEach(myfunction);
+        function myfunction(e,i,a) {
+            return array[i]=e*10;
+        }
+        console.log(array);
+    </script>
+
+    <script>
+        let arr=[79,63,52,10,30];
+        let arr1=arr.map(my_function);
+        console.log(arr1);
+        function my_function(y) {
+            return y+10*5;
+        }
+    </script>
+
+    <script>
+        let t=[
+            {fname :"tina", lname:"shah"},
+            {fname :"riya",lname:"shah"},
+        ];
+        let t1=t.map(take);
+        document.write(t1);
+        function take(p) {
+            return p.fname+" "+p.lname;
+        }
+    </script>
+
+    <script>
+        let arr2=[10,20,30,40,50];
+        let arr3=arr2.reduce(hello);
+        function hello(total,value,index,arr2) {
+            return total-value;
+        }
+        console.log(arr3);
+    </script>
+
+    <script>
+        let arr4=[70,50,60,40,20];
+        let arr5=arr4.reduceRight(my_fun);
+        function my_fun(total,value,index,arr4) {
+            return total+value;
+        }
+        console.log(arr5);
+    </script>
+
+    <script>
+        let a1=[60,50,80,50,90];
+        function Name(a1) {
+            return a1%3==0;
+        }
+        let a2=a1.every(Name);
+        console.log(a2);
+    </script>
+
+    <script>
+        let b1=[20,50,80,30,65];
+        function book(b1) {
+            return b1%3==0;
+        }
+        let b2=b1.some(book);
+        console.log(b2);
+    </script>
+
+    <script>
+        let c1={
+            0:"priya",
+            1:"shah",
+            2:12,
+            length:3,
+        }
+        let c2=Array.from(c1);
+        console.log(c2);
+    </script>
+
+    <script>
+       let p=[78,96,85,63,42];
+       let p1=p.entries();
+       for(let i of p1)
+       {
+           console.log(i);
+       }
+    </script>
+    
+    <script>
+        let f=[40,20,30,60,"grapes"];
+        let f1=f.indexOf("grapes");
+        console.log(f1);
+    </script>
+
+    <script>
+        let e="78,96,35,44";
+        let e1=Array.isArray(e);
+        console.log(e1);
+    </script>
+
+    <script>
+        let g=["take","give",458,"document","search"]
+        let g1=g.includes("document");
+        console.log(g1);
+    </script>
+
+    <script>
+        let del=[78,96,35,24];
+        delete del[2];
+        console.log(del);
+    </script>
+<br>
+   
+<!-- copyWithin(); -->
+<script>
+    let copy=["read","the","book","story","novel"];
+    let copy1=copy.copyWithin(3,2,3);
+    console.log(copy1);
+</script>
+
+<script>
+    let same=[14,25,36,98,75,66];
+    let same1=same.copyWithin(2);
+    console.log(same1);
+</script>
+
+<script>
+    let s1=[78,63,52,89,74,21];
+    let s2=s1.copyWithin(2,1,2);
+    console.log(s2);
+</script>
+
+<script>
+    let s3=[75,63,21,41,35,98];
+    let s4=s3.copyWithin(3,1,2);
+    console.log(s4);
+</script>
+
+<script>
+  let h=[80,20,30,60,50];
+  let h1=h.forEach((e,i,a)=>{
+    return h[i]=e*10;
+  })
+  console.log(h);
+</script>
+
+<script>
+    let east=[70,50,40,60];
+    let north=east.reduce((total,value,index,east)=>{
+        console.log(total,value);
+        return total+value
+    })
+    console.log(north);
+</script>
+</body>
+</html>
